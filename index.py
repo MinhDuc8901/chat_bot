@@ -15,9 +15,9 @@ def upload(file: UploadFile = File(...)):
         with open(filepath, 'wb') as f:
             shutil.copyfileobj(file.file, f)
 
-        resImg = processing.addFrame(filepath)
-        cv2.imshow("result", resImg)
-        cv2.waitKey(0)
+#         resImg = processing.addFrame(filepath)
+#         cv2.imshow("result", resImg)
+#         cv2.waitKey(0)
 
     except Exception:
         return {"message": "There was an error uploading the file"}
